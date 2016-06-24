@@ -1,0 +1,20 @@
+        <ion-view title="通知" ng-controller="NotificationCtrl">
+            <ion-content>
+                <form name="addUserForm" ng-init="setFormScope(this)" data-ng-submit="userSubmit()">
+                    <div class="list">
+                        <li class="item" on-tap="pageJump('app.purchaseinfo')">
+                            支付
+                        </li>
+                        <li class="item " on-tap="pageJump('app.alarm')">
+                            报警
+                        </li>
+                        <li class="item " on-tap="pageJump('app.battery')">
+                            主机电池信息
+                        </li>                        
+                        <li class="item " on-tap="pageJump('app.manustack')">
+                            操作记录
+                        </li>
+                    </div>
+                </form>
+            </ion-content>
+        </ion-view>

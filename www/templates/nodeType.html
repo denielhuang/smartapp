@@ -1,0 +1,30 @@
+        <ion-view title="{{NodesViewModel.nodeType}}"  ng-controller="OverViewCtrl">
+            <ion-content class="padding">
+                <div ng-if="nodes.length === 0">
+                    <h5 class="text-center">No Nodes to Show</h5>
+                </div>
+
+                <div ng-repeat="node in NodesViewModel.nodes | filter: { nodeType: NodesViewModel.nodeType}">
+                    <div ng-if="node.id != null">
+                        <div class="list">
+                            <div class="item item-icon-left">
+                                <i class="icon ion-flame" ></i>
+                                {{node.name}} :{{node.nodeType}}
+                                <span class="item-note">
+                                    {{node.alert}}
+                                </span>
+                            </div>
+                            <div class="clearfix"></div>
+                            <div class="item item-icon-left">
+                                <i class="icon ion-flame" ></i>
+                                最新报警时间
+                                <span class="item-note">
+                                    {{node.alertTime}}
+                                </span>
+                            </div>                            
+                        </div>
+                    </div>                    
+                </div>
+
+            </ion-content>
+        </ion-view>
